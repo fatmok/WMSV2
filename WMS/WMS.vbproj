@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5B3BA4D-AE15-44B3-9D5C-ED79F457ED99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WMS.My.MyApplication</StartupObject>
+    <RootNamespace>WMS</RootNamespace>
+    <AssemblyName>WMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>c:\WMSDemoSetup150507\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/WMS/</UpdateUrl>
+    <ProductName>WMS</ProductName>
+    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C87869553A8001AC0AA8D8EDA3C78500FE3BD85</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain2.Designer.vb">
+      <DependentUpon>frmMain2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\dsCardMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCardMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsDistrictMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDistrictMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsDistrictMaster.vb">
+      <DependentUpon>dsDistrictMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsGarbageSubCatMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGarbageSubCatMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchItem.designer.vb">
+      <DependentUpon>frmSearchItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\dsGarbageCatMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGarbageCatMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmDBTools.Designer.vb">
+      <DependentUpon>frmDBTools.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDBTools.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDetailSelector.designer.vb">
+      <DependentUpon>frmReportDetailSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDetailSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\dsGarbageCatMaster.vb">
+      <DependentUpon>dsGarbageCatMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetData.designer.vb">
+      <DependentUpon>frmGetData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGetData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportDateSelector.designer.vb">
+      <DependentUpon>frmReportDateSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportDateSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.Designer.vb">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetup.designer.vb">
+      <DependentUpon>frmSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\dsAreaMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAreaMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsBinMaster1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBinMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsCountryMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCountryMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsLogMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLogMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsShopMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsShopMaster.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Report\dsStationMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStationMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsSummary.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsUserMaster1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUserMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Script\FunctionScript.vb" />
+    <Compile Include="Script\MainScript.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\dsDeviceMaster.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDeviceMaster.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmDeviceSetup.designer.vb">
+      <DependentUpon>frmDeviceSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmDeviceSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmShopSetup.designer.vb">
+      <DependentUpon>frmShopSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmShopSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmStationSetup.designer.vb">
+      <DependentUpon>frmStationSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmStationSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmDistrictSetup.designer.vb">
+      <DependentUpon>frmDistrictSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmDistrictSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmAreaSetup.designer.vb">
+      <DependentUpon>frmAreaSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmAreaSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBinSetup.designer.vb">
+      <DependentUpon>frmBinSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBinSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmBinUploadTime.Designer.vb">
+      <DependentUpon>frmBinUploadTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmBinUploadTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmGarbageCatSetup.designer.vb">
+      <DependentUpon>frmGarbageCatSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmGarbageCatSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmGarbageSubCatSetup.designer.vb">
+      <DependentUpon>frmGarbageSubCatSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmGarbageSubCatSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmCountrySetup.designer.vb">
+      <DependentUpon>frmCountrySetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmCountrySetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmUserSetup.designer.vb">
+      <DependentUpon>frmUserSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmUserSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.designer.vb">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WMS2015DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WMS2015DataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\dsDistrictMaster.xsc">
+      <DependentUpon>dsDistrictMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsDistrictMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDistrictMaster.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsDistrictMaster.xss">
+      <DependentUpon>dsDistrictMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsShopMaster.xsc">
+      <DependentUpon>dsShopMaster.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Report\dsShopMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsShopMaster.Designer.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Report\dsShopMaster.xss">
+      <DependentUpon>dsShopMaster.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Report\dsStationMaster.xsc">
+      <DependentUpon>dsStationMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsStationMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStationMaster.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsStationMaster.xss">
+      <DependentUpon>dsStationMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\lightbulb_24px_505132_easyicon.net.png" />
+    <None Include="Resources\archives_24px_505082_easyicon.net.png" />
+    <None Include="Resources\settings_24px_505161_easyicon.net.png" />
+    <None Include="Resources\waston-all6.jpg" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDBTools.resx">
+      <DependentUpon>frmDBTools.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetData.resx">
+      <DependentUpon>frmGetData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain2.resx">
+      <DependentUpon>frmMain2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDetailSelector.resx">
+      <DependentUpon>frmReportDetailSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportDateSelector.resx">
+      <DependentUpon>frmReportDateSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportViewer.resx">
+      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchItem.resx">
+      <DependentUpon>frmSearchItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetup.resx">
+      <DependentUpon>frmSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="favicon.ico" />
+    <Content Include="Report\rptAreaMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptCountryList.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptUserList.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptGarbageCatMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptGarbageSubCatMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptCardMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptSummary.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptBinMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptLogMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptSummaryGType1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptSummaryGType2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptInvoice.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptSiteReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptDistrictMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptStationMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptShopMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Report\rptDeviceMaster.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Setup\frmDeviceSetup.resx">
+      <DependentUpon>frmDeviceSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmShopSetup.resx">
+      <DependentUpon>frmShopSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmStationSetup.resx">
+      <DependentUpon>frmStationSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmDistrictSetup.resx">
+      <DependentUpon>frmDistrictSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmAreaSetup.resx">
+      <DependentUpon>frmAreaSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBinSetup.resx">
+      <DependentUpon>frmBinSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmBinUploadTime.resx">
+      <DependentUpon>frmBinUploadTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmGarbageCatSetup.resx">
+      <DependentUpon>frmGarbageCatSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmGarbageSubCatSetup.resx">
+      <DependentUpon>frmGarbageSubCatSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmCountrySetup.resx">
+      <DependentUpon>frmCountrySetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmUserSetup.resx">
+      <DependentUpon>frmUserSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Report\dsCardMaster.xsc">
+      <DependentUpon>dsCardMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCardMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCardMaster.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsCardMaster.xss">
+      <DependentUpon>dsCardMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGarbageSubCatMaster.xsc">
+      <DependentUpon>dsGarbageSubCatMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGarbageSubCatMaster.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGarbageSubCatMaster.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsGarbageSubCatMaster.xss">
+      <DependentUpon>dsGarbageSubCatMaster.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="Report\dsGarbageCatMaster.xsc">
+      <DependentUpon>dsGarbageCatMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsGarbageCatMaster.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGarbageCatMaster.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsGarbageCatMaster.xss">
+      <DependentUpon>dsGarbageCatMaster.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="Report\dsAreaMaster.xsc">
+      <DependentUpon>dsAreaMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsAreaMaster.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAreaMaster.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsAreaMaster.xss">
+      <DependentUpon>dsAreaMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsBinMaster.xsc">
+      <DependentUpon>dsBinMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsBinMaster.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBinMaster1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsBinMaster.xss">
+      <DependentUpon>dsBinMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCountryMaster.xsc">
+      <DependentUpon>dsCountryMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsCountryMaster.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCountryMaster.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsCountryMaster.xss">
+      <DependentUpon>dsCountryMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsLogMaster.xsc">
+      <DependentUpon>dsLogMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsLogMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLogMaster.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsLogMaster.xss">
+      <DependentUpon>dsLogMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSummary.xsc">
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsSummary.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSummary.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsSummary.xss">
+      <DependentUpon>dsSummary.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsUserMaster.xsc">
+      <DependentUpon>dsUserMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsUserMaster.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUserMaster1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report\dsUserMaster.xss">
+      <DependentUpon>dsUserMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsDeviceMaster.xsc">
+      <DependentUpon>dsDeviceMaster.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dsDeviceMaster.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDeviceMaster.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\dsDeviceMaster.xss">
+      <DependentUpon>dsDeviceMaster.xsd</DependentUpon>
+    </None>
+    <None Include="WMS2015DataSet.xsc">
+      <DependentUpon>WMS2015DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WMS2015DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WMS2015DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WMS2015DataSet.xss">
+      <DependentUpon>WMS2015DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WMS_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrative-docs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VB_screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

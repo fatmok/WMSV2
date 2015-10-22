@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSummary" targetNamespace="http://tempuri.org/dsSummary.xsd" xmlns:mstns="http://tempuri.org/dsSummary.xsd" xmlns="http://tempuri.org/dsSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMSConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SummaryTableAdapter" GeneratorDataComponentClassName="SummaryTableAdapter" Name="Summary" UserDataComponentName="SummaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WMSConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  LogMaster.LogId, LogMaster.LogDate, LogMaster.LogTime, LogMaster.Gross, LogMaster.Tare, LogMaster.Net, LogMaster.ModUser, LogMaster.BinId, 
+               AreaMaster.AreaName, GarbageCatMaster.GarbageCatName, GarbageSubCatMaster.GarbageSubCatName, BinMaster.CustNo, BinMaster.ModelNO, 
+               BinMaster.StationNo, CountryMaster.CountryName, BinMaster.address
+FROM     CountryMaster RIGHT OUTER JOIN
+               AreaMaster ON CountryMaster.CountryId = AreaMaster.CountryId RIGHT OUTER JOIN
+               GarbageSubCatMaster RIGHT OUTER JOIN
+               BinMaster ON GarbageSubCatMaster.GarbageSubCatId = BinMaster.GarbageSubCat LEFT OUTER JOIN
+               GarbageCatMaster ON BinMaster.GarbageCat = GarbageCatMaster.GarbageCatId ON AreaMaster.AreaId = BinMaster.AreaId RIGHT OUTER JOIN
+               LogMaster ON BinMaster.BinId = LogMaster.BinId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LogId" DataSetColumn="LogId" />
+              <Mapping SourceColumn="LogDate" DataSetColumn="LogDate" />
+              <Mapping SourceColumn="LogTime" DataSetColumn="LogTime" />
+              <Mapping SourceColumn="Gross" DataSetColumn="Gross" />
+              <Mapping SourceColumn="Tare" DataSetColumn="Tare" />
+              <Mapping SourceColumn="Net" DataSetColumn="Net" />
+              <Mapping SourceColumn="ModUser" DataSetColumn="ModUser" />
+              <Mapping SourceColumn="BinId" DataSetColumn="BinId" />
+              <Mapping SourceColumn="AreaName" DataSetColumn="AreaName" />
+              <Mapping SourceColumn="GarbageCatName" DataSetColumn="GarbageCatName" />
+              <Mapping SourceColumn="GarbageSubCatName" DataSetColumn="GarbageSubCatName" />
+              <Mapping SourceColumn="CustNo" DataSetColumn="CustNo" />
+              <Mapping SourceColumn="ModelNO" DataSetColumn="ModelNO" />
+              <Mapping SourceColumn="StationNo" DataSetColumn="StationNo" />
+              <Mapping SourceColumn="CountryName" DataSetColumn="CountryName" />
+              <Mapping SourceColumn="address" DataSetColumn="address" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSummary" msprop:Generator_UserDSName="dsSummary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Summary" msprop:Generator_TableClassName="SummaryDataTable" msprop:Generator_TableVarName="tableSummary" msprop:Generator_TablePropName="Summary" msprop:Generator_RowDeletingName="SummaryRowDeleting" msprop:Generator_RowChangingName="SummaryRowChanging" msprop:Generator_RowEvHandlerName="SummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="SummaryRowDeleted" msprop:Generator_UserTableName="Summary" msprop:Generator_RowChangedName="SummaryRowChanged" msprop:Generator_RowEvArgName="SummaryRowChangeEvent" msprop:Generator_RowClassName="SummaryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LogId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLogId" msprop:Generator_ColumnPropNameInRow="LogId" msprop:Generator_ColumnPropNameInTable="LogIdColumn" msprop:Generator_UserColumnName="LogId" type="xs:int" />
+              <xs:element name="LogDate" msprop:Generator_ColumnVarNameInTable="columnLogDate" msprop:Generator_ColumnPropNameInRow="LogDate" msprop:Generator_ColumnPropNameInTable="LogDateColumn" msprop:Generator_UserColumnName="LogDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LogTime" msprop:Generator_ColumnVarNameInTable="columnLogTime" msprop:Generator_ColumnPropNameInRow="LogTime" msprop:Generator_ColumnPropNameInTable="LogTimeColumn" msprop:Generator_UserColumnName="LogTime" type="xs:duration" minOccurs="0" />
+              <xs:element name="Gross" msprop:Generator_ColumnVarNameInTable="columnGross" msprop:Generator_ColumnPropNameInRow="Gross" msprop:Generator_ColumnPropNameInTable="GrossColumn" msprop:Generator_UserColumnName="Gross" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tare" msprop:Generator_ColumnVarNameInTable="columnTare" msprop:Generator_ColumnPropNameInRow="Tare" msprop:Generator_ColumnPropNameInTable="TareColumn" msprop:Generator_UserColumnName="Tare" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net" msprop:Generator_ColumnVarNameInTable="columnNet" msprop:Generator_ColumnPropNameInRow="Net" msprop:Generator_ColumnPropNameInTable="NetColumn" msprop:Generator_UserColumnName="Net" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ModUser" msprop:Generator_ColumnVarNameInTable="columnModUser" msprop:Generator_ColumnPropNameInRow="ModUser" msprop:Generator_ColumnPropNameInTable="ModUserColumn" msprop:Generator_UserColumnName="ModUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinId" msprop:Generator_ColumnVarNameInTable="columnBinId" msprop:Generator_ColumnPropNameInRow="BinId" msprop:Generator_ColumnPropNameInTable="BinIdColumn" msprop:Generator_UserColumnName="BinId" type="xs:int" minOccurs="0" />
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GarbageCatName" msprop:Generator_ColumnVarNameInTable="columnGarbageCatName" msprop:Generator_ColumnPropNameInRow="GarbageCatName" msprop:Generator_ColumnPropNameInTable="GarbageCatNameColumn" msprop:Generator_UserColumnName="GarbageCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GarbageSubCatName" msprop:Generator_ColumnVarNameInTable="columnGarbageSubCatName" msprop:Generator_ColumnPropNameInRow="GarbageSubCatName" msprop:Generator_ColumnPropNameInTable="GarbageSubCatNameColumn" msprop:Generator_UserColumnName="GarbageSubCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustNo" msprop:Generator_ColumnVarNameInTable="columnCustNo" msprop:Generator_ColumnPropNameInRow="CustNo" msprop:Generator_ColumnPropNameInTable="CustNoColumn" msprop:Generator_UserColumnName="CustNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelNO" msprop:Generator_ColumnVarNameInTable="columnModelNO" msprop:Generator_ColumnPropNameInRow="ModelNO" msprop:Generator_ColumnPropNameInTable="ModelNOColumn" msprop:Generator_UserColumnName="ModelNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StationNo" msprop:Generator_ColumnVarNameInTable="columnStationNo" msprop:Generator_ColumnPropNameInRow="StationNo" msprop:Generator_ColumnPropNameInTable="StationNoColumn" msprop:Generator_UserColumnName="StationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryName" msprop:Generator_ColumnVarNameInTable="columnCountryName" msprop:Generator_ColumnPropNameInRow="CountryName" msprop:Generator_ColumnPropNameInTable="CountryNameColumn" msprop:Generator_UserColumnName="CountryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Summary" />
+      <xs:field xpath="mstns:LogId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsBinMaster" targetNamespace="http://tempuri.org/dsBinMaster.xsd" xmlns:mstns="http://tempuri.org/dsBinMaster.xsd" xmlns="http://tempuri.org/dsBinMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMSConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BinMasterTableAdapter" GeneratorDataComponentClassName="BinMasterTableAdapter" Name="BinMaster" UserDataComponentName="BinMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WMSConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  CountryMaster.CountryName, AreaMaster.AreaName, BinMaster.CustNo, BinMaster.ModelNO, BinMaster.Size, BinMaster.NetWeight, BinMaster.Capacity, 
+               BinMaster.address, BinMaster.remark, BinMaster.ModUser, BinMaster.sys_date, GarbageCatMaster.GarbageCatName, 
+               GarbageSubCatMaster.GarbageSubCatName, BinMaster.StationNo, BinMaster.on_show
+FROM     GarbageSubCatMaster RIGHT OUTER JOIN
+               BinMaster ON GarbageSubCatMaster.GarbageSubCatId = BinMaster.GarbageSubCat LEFT OUTER JOIN
+               GarbageCatMaster ON BinMaster.GarbageCat = GarbageCatMaster.GarbageCatId LEFT OUTER JOIN
+               AreaMaster LEFT OUTER JOIN
+               CountryMaster ON AreaMaster.CountryId = CountryMaster.CountryId ON BinMaster.AreaId = AreaMaster.AreaId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CustNo" DataSetColumn="CustNo" />
+              <Mapping SourceColumn="ModelNO" DataSetColumn="ModelNO" />
+              <Mapping SourceColumn="Size" DataSetColumn="Size" />
+              <Mapping SourceColumn="NetWeight" DataSetColumn="NetWeight" />
+              <Mapping SourceColumn="Capacity" DataSetColumn="Capacity" />
+              <Mapping SourceColumn="address" DataSetColumn="address" />
+              <Mapping SourceColumn="remark" DataSetColumn="remark" />
+              <Mapping SourceColumn="on_show" DataSetColumn="on_show" />
+              <Mapping SourceColumn="ModUser" DataSetColumn="ModUser" />
+              <Mapping SourceColumn="sys_date" DataSetColumn="sys_date" />
+              <Mapping SourceColumn="StationNo" DataSetColumn="StationNo" />
+              <Mapping SourceColumn="CountryName" DataSetColumn="CountryName" />
+              <Mapping SourceColumn="AreaName" DataSetColumn="AreaName" />
+              <Mapping SourceColumn="GarbageCatName" DataSetColumn="GarbageCatName" />
+              <Mapping SourceColumn="GarbageSubCatName" DataSetColumn="GarbageSubCatName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsBinMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsBinMaster" msprop:Generator_UserDSName="dsBinMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BinMaster" msprop:Generator_TableClassName="BinMasterDataTable" msprop:Generator_TableVarName="tableBinMaster" msprop:Generator_RowChangedName="BinMasterRowChanged" msprop:Generator_TablePropName="BinMaster" msprop:Generator_RowDeletingName="BinMasterRowDeleting" msprop:Generator_RowChangingName="BinMasterRowChanging" msprop:Generator_RowEvHandlerName="BinMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="BinMasterRowDeleted" msprop:Generator_RowClassName="BinMasterRow" msprop:Generator_UserTableName="BinMaster" msprop:Generator_RowEvArgName="BinMasterRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustNo" msprop:Generator_ColumnVarNameInTable="columnCustNo" msprop:Generator_ColumnPropNameInRow="CustNo" msprop:Generator_ColumnPropNameInTable="CustNoColumn" msprop:Generator_UserColumnName="CustNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelNO" msprop:Generator_ColumnVarNameInTable="columnModelNO" msprop:Generator_ColumnPropNameInRow="ModelNO" msprop:Generator_ColumnPropNameInTable="ModelNOColumn" msprop:Generator_UserColumnName="ModelNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetWeight" msprop:Generator_ColumnVarNameInTable="columnNetWeight" msprop:Generator_ColumnPropNameInRow="NetWeight" msprop:Generator_ColumnPropNameInTable="NetWeightColumn" msprop:Generator_UserColumnName="NetWeight" type="xs:int" minOccurs="0" />
+              <xs:element name="Capacity" msprop:Generator_ColumnVarNameInTable="columnCapacity" msprop:Generator_ColumnPropNameInRow="Capacity" msprop:Generator_ColumnPropNameInTable="CapacityColumn" msprop:Generator_UserColumnName="Capacity" type="xs:int" minOccurs="0" />
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="on_show" msprop:Generator_ColumnVarNameInTable="columnon_show" msprop:Generator_ColumnPropNameInRow="on_show" msprop:Generator_ColumnPropNameInTable="on_showColumn" msprop:Generator_UserColumnName="on_show" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModUser" msprop:Generator_ColumnVarNameInTable="columnModUser" msprop:Generator_ColumnPropNameInRow="ModUser" msprop:Generator_ColumnPropNameInTable="ModUserColumn" msprop:Generator_UserColumnName="ModUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sys_date" msprop:Generator_ColumnVarNameInTable="columnsys_date" msprop:Generator_ColumnPropNameInRow="sys_date" msprop:Generator_ColumnPropNameInTable="sys_dateColumn" msprop:Generator_UserColumnName="sys_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="StationNo" msprop:Generator_ColumnVarNameInTable="columnStationNo" msprop:Generator_ColumnPropNameInRow="StationNo" msprop:Generator_ColumnPropNameInTable="StationNoColumn" msprop:Generator_UserColumnName="StationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountryName" msprop:Generator_ColumnVarNameInTable="columnCountryName" msprop:Generator_ColumnPropNameInRow="CountryName" msprop:Generator_ColumnPropNameInTable="CountryNameColumn" msprop:Generator_UserColumnName="CountryName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GarbageCatName" msprop:Generator_ColumnVarNameInTable="columnGarbageCatName" msprop:Generator_ColumnPropNameInRow="GarbageCatName" msprop:Generator_ColumnPropNameInTable="GarbageCatNameColumn" msprop:Generator_UserColumnName="GarbageCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GarbageSubCatName" msprop:Generator_ColumnVarNameInTable="columnGarbageSubCatName" msprop:Generator_ColumnPropNameInRow="GarbageSubCatName" msprop:Generator_ColumnPropNameInTable="GarbageSubCatNameColumn" msprop:Generator_UserColumnName="GarbageSubCatName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

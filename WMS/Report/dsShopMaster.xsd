@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsShopMaster" targetNamespace="http://tempuri.org/dsShopMaster.xsd" xmlns:mstns="http://tempuri.org/dsShopMaster.xsd" xmlns="http://tempuri.org/dsShopMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMS2015ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMS2015ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMS2015ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsShopMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsShopMaster" msprop:Generator_UserDSName="dsShopMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ShopMaster" msprop:Generator_TableClassName="ShopMasterDataTable" msprop:Generator_TableVarName="tableShopMaster" msprop:Generator_TablePropName="ShopMaster" msprop:Generator_RowDeletingName="ShopMasterRowDeleting" msprop:Generator_RowChangingName="ShopMasterRowChanging" msprop:Generator_RowEvHandlerName="ShopMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="ShopMasterRowDeleted" msprop:Generator_UserTableName="ShopMaster" msprop:Generator_RowChangedName="ShopMasterRowChanged" msprop:Generator_RowEvArgName="ShopMasterRowChangeEvent" msprop:Generator_RowClassName="ShopMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="編號" msprop:Generator_ColumnVarNameInTable="column編號" msprop:Generator_ColumnPropNameInRow="編號" msprop:Generator_ColumnPropNameInTable="編號Column" msprop:Generator_UserColumnName="編號" type="xs:int" />
+              <xs:element name="自訂編號" msprop:Generator_ColumnVarNameInTable="column自訂編號" msprop:Generator_ColumnPropNameInRow="自訂編號" msprop:Generator_ColumnPropNameInTable="自訂編號Column" msprop:Generator_UserColumnName="自訂編號">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="商舖名稱" msprop:Generator_ColumnVarNameInTable="column商舖名稱" msprop:Generator_ColumnPropNameInRow="商舖名稱" msprop:Generator_ColumnPropNameInTable="商舖名稱Column" msprop:Generator_UserColumnName="商舖名稱">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="工作站" msprop:Generator_ColumnVarNameInTable="column工作站" msprop:Generator_ColumnPropNameInRow="工作站" msprop:Generator_ColumnPropNameInTable="工作站Column" msprop:Generator_UserColumnName="工作站">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="總區" msprop:Generator_ColumnVarNameInTable="column總區" msprop:Generator_ColumnPropNameInRow="總區" msprop:Generator_ColumnPropNameInTable="總區Column" msprop:Generator_UserColumnName="總區" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地域" msprop:Generator_ColumnVarNameInTable="column地域" msprop:Generator_ColumnPropNameInRow="地域" msprop:Generator_ColumnPropNameInTable="地域Column" msprop:Generator_UserColumnName="地域" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地區" msprop:Generator_ColumnVarNameInTable="column地區" msprop:Generator_ColumnPropNameInRow="地區" msprop:Generator_ColumnPropNameInTable="地區Column" msprop:Generator_UserColumnName="地區" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="地址" msprop:Generator_ColumnVarNameInTable="column地址" msprop:Generator_ColumnPropNameInRow="地址" msprop:Generator_ColumnPropNameInTable="地址Column" msprop:Generator_UserColumnName="地址">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="聯絡人" msprop:Generator_ColumnVarNameInTable="column聯絡人" msprop:Generator_ColumnPropNameInRow="聯絡人" msprop:Generator_ColumnPropNameInTable="聯絡人Column" msprop:Generator_UserColumnName="聯絡人" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="電話" msprop:Generator_ColumnVarNameInTable="column電話" msprop:Generator_ColumnPropNameInRow="電話" msprop:Generator_ColumnPropNameInTable="電話Column" msprop:Generator_UserColumnName="電話" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="傳真" msprop:Generator_ColumnVarNameInTable="column傳真" msprop:Generator_ColumnPropNameInRow="傳真" msprop:Generator_ColumnPropNameInTable="傳真Column" msprop:Generator_UserColumnName="傳真" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="備註" msprop:Generator_ColumnVarNameInTable="column備註" msprop:Generator_ColumnPropNameInRow="備註" msprop:Generator_ColumnPropNameInTable="備註Column" msprop:Generator_UserColumnName="備註" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="顯示" msprop:Generator_ColumnVarNameInTable="column顯示" msprop:Generator_ColumnPropNameInRow="顯示" msprop:Generator_ColumnPropNameInTable="顯示Column" msprop:Generator_UserColumnName="顯示" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="排序" msprop:Generator_ColumnVarNameInTable="column排序" msprop:Generator_ColumnPropNameInRow="排序" msprop:Generator_ColumnPropNameInTable="排序Column" msprop:Generator_UserColumnName="排序" type="xs:int" minOccurs="0" />
+              <xs:element name="經手人" msprop:Generator_ColumnVarNameInTable="column經手人" msprop:Generator_ColumnPropNameInRow="經手人" msprop:Generator_ColumnPropNameInTable="經手人Column" msprop:Generator_UserColumnName="經手人" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="修改日期" msprop:Generator_ColumnVarNameInTable="column修改日期" msprop:Generator_ColumnPropNameInRow="修改日期" msprop:Generator_ColumnPropNameInTable="修改日期Column" msprop:Generator_UserColumnName="修改日期" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ShopMaster" />
+      <xs:field xpath="mstns:編號" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

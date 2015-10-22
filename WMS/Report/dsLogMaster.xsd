@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLogMaster" targetNamespace="http://tempuri.org/dsLogMaster.xsd" xmlns:mstns="http://tempuri.org/dsLogMaster.xsd" xmlns="http://tempuri.org/dsLogMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMSConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LogMasterTableAdapter" GeneratorDataComponentClassName="LogMasterTableAdapter" Name="LogMaster" UserDataComponentName="LogMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WMSConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  LogMaster.LogId, LogMaster.LogDate, LogMaster.LogTime, LogMaster.LogNo, LogMaster.LogSN, LogMaster.RFID, LogMaster.Gross, LogMaster.Tare, 
+               LogMaster.Net, LogMaster.LogOri, LogMaster.FileName, LogMaster.sys_date, LogMaster.ModUser, LogMaster.DecCode, LogMaster.BinId, 
+               LogMaster.PiSn, BinMaster.ModelNO, BinMaster.CustNo, BinMaster.StationNo
+FROM     LogMaster LEFT OUTER JOIN
+               BinMaster ON LogMaster.BinId = BinMaster.BinId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LogId" DataSetColumn="LogId" />
+              <Mapping SourceColumn="LogDate" DataSetColumn="LogDate" />
+              <Mapping SourceColumn="LogTime" DataSetColumn="LogTime" />
+              <Mapping SourceColumn="LogNo" DataSetColumn="LogNo" />
+              <Mapping SourceColumn="LogSN" DataSetColumn="LogSN" />
+              <Mapping SourceColumn="RFID" DataSetColumn="RFID" />
+              <Mapping SourceColumn="Gross" DataSetColumn="Gross" />
+              <Mapping SourceColumn="Tare" DataSetColumn="Tare" />
+              <Mapping SourceColumn="Net" DataSetColumn="Net" />
+              <Mapping SourceColumn="LogOri" DataSetColumn="LogOri" />
+              <Mapping SourceColumn="FileName" DataSetColumn="FileName" />
+              <Mapping SourceColumn="sys_date" DataSetColumn="sys_date" />
+              <Mapping SourceColumn="ModUser" DataSetColumn="ModUser" />
+              <Mapping SourceColumn="DecCode" DataSetColumn="DecCode" />
+              <Mapping SourceColumn="BinId" DataSetColumn="BinId" />
+              <Mapping SourceColumn="PiSn" DataSetColumn="PiSn" />
+              <Mapping SourceColumn="ModelNO" DataSetColumn="ModelNO" />
+              <Mapping SourceColumn="CustNo" DataSetColumn="CustNo" />
+              <Mapping SourceColumn="StationNo" DataSetColumn="StationNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLogMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsLogMaster" msprop:Generator_UserDSName="dsLogMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LogMaster" msprop:Generator_TableClassName="LogMasterDataTable" msprop:Generator_TableVarName="tableLogMaster" msprop:Generator_TablePropName="LogMaster" msprop:Generator_RowDeletingName="LogMasterRowDeleting" msprop:Generator_RowChangingName="LogMasterRowChanging" msprop:Generator_RowEvHandlerName="LogMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="LogMasterRowDeleted" msprop:Generator_UserTableName="LogMaster" msprop:Generator_RowChangedName="LogMasterRowChanged" msprop:Generator_RowEvArgName="LogMasterRowChangeEvent" msprop:Generator_RowClassName="LogMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LogId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLogId" msprop:Generator_ColumnPropNameInRow="LogId" msprop:Generator_ColumnPropNameInTable="LogIdColumn" msprop:Generator_UserColumnName="LogId" type="xs:int" />
+              <xs:element name="LogDate" msprop:Generator_ColumnVarNameInTable="columnLogDate" msprop:Generator_ColumnPropNameInRow="LogDate" msprop:Generator_ColumnPropNameInTable="LogDateColumn" msprop:Generator_UserColumnName="LogDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LogTime" msprop:Generator_ColumnVarNameInTable="columnLogTime" msprop:Generator_ColumnPropNameInRow="LogTime" msprop:Generator_ColumnPropNameInTable="LogTimeColumn" msprop:Generator_UserColumnName="LogTime" type="xs:duration" minOccurs="0" />
+              <xs:element name="LogNo" msprop:Generator_ColumnVarNameInTable="columnLogNo" msprop:Generator_ColumnPropNameInRow="LogNo" msprop:Generator_ColumnPropNameInTable="LogNoColumn" msprop:Generator_UserColumnName="LogNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LogSN" msprop:Generator_ColumnVarNameInTable="columnLogSN" msprop:Generator_ColumnPropNameInRow="LogSN" msprop:Generator_ColumnPropNameInTable="LogSNColumn" msprop:Generator_UserColumnName="LogSN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFID" msprop:Generator_ColumnVarNameInTable="columnRFID" msprop:Generator_ColumnPropNameInRow="RFID" msprop:Generator_ColumnPropNameInTable="RFIDColumn" msprop:Generator_UserColumnName="RFID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gross" msprop:Generator_ColumnVarNameInTable="columnGross" msprop:Generator_ColumnPropNameInRow="Gross" msprop:Generator_ColumnPropNameInTable="GrossColumn" msprop:Generator_UserColumnName="Gross" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Tare" msprop:Generator_ColumnVarNameInTable="columnTare" msprop:Generator_ColumnPropNameInRow="Tare" msprop:Generator_ColumnPropNameInTable="TareColumn" msprop:Generator_UserColumnName="Tare" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Net" msprop:Generator_ColumnVarNameInTable="columnNet" msprop:Generator_ColumnPropNameInRow="Net" msprop:Generator_ColumnPropNameInTable="NetColumn" msprop:Generator_UserColumnName="Net" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LogOri" msprop:Generator_ColumnVarNameInTable="columnLogOri" msprop:Generator_ColumnPropNameInRow="LogOri" msprop:Generator_ColumnPropNameInTable="LogOriColumn" msprop:Generator_UserColumnName="LogOri" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FileName" msprop:Generator_ColumnVarNameInTable="columnFileName" msprop:Generator_ColumnPropNameInRow="FileName" msprop:Generator_ColumnPropNameInTable="FileNameColumn" msprop:Generator_UserColumnName="FileName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sys_date" msprop:Generator_ColumnVarNameInTable="columnsys_date" msprop:Generator_ColumnPropNameInRow="sys_date" msprop:Generator_ColumnPropNameInTable="sys_dateColumn" msprop:Generator_UserColumnName="sys_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ModUser" msprop:Generator_ColumnVarNameInTable="columnModUser" msprop:Generator_ColumnPropNameInRow="ModUser" msprop:Generator_ColumnPropNameInTable="ModUserColumn" msprop:Generator_UserColumnName="ModUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DecCode" msprop:Generator_ColumnVarNameInTable="columnDecCode" msprop:Generator_ColumnPropNameInRow="DecCode" msprop:Generator_ColumnPropNameInTable="DecCodeColumn" msprop:Generator_UserColumnName="DecCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BinId" msprop:Generator_ColumnVarNameInTable="columnBinId" msprop:Generator_ColumnPropNameInRow="BinId" msprop:Generator_ColumnPropNameInTable="BinIdColumn" msprop:Generator_UserColumnName="BinId" type="xs:int" minOccurs="0" />
+              <xs:element name="PiSn" msprop:Generator_ColumnVarNameInTable="columnPiSn" msprop:Generator_ColumnPropNameInRow="PiSn" msprop:Generator_ColumnPropNameInTable="PiSnColumn" msprop:Generator_UserColumnName="PiSn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelNO" msprop:Generator_ColumnVarNameInTable="columnModelNO" msprop:Generator_ColumnPropNameInRow="ModelNO" msprop:Generator_ColumnPropNameInTable="ModelNOColumn" msprop:Generator_UserColumnName="ModelNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustNo" msprop:Generator_ColumnVarNameInTable="columnCustNo" msprop:Generator_ColumnPropNameInRow="CustNo" msprop:Generator_ColumnPropNameInTable="CustNoColumn" msprop:Generator_UserColumnName="CustNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StationNo" msprop:Generator_ColumnVarNameInTable="columnStationNo" msprop:Generator_ColumnPropNameInRow="StationNo" msprop:Generator_ColumnPropNameInTable="StationNoColumn" msprop:Generator_UserColumnName="StationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LogMaster" />
+      <xs:field xpath="mstns:LogId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

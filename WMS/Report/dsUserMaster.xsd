@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsUserMaster" targetNamespace="http://tempuri.org/dsUserMaster.xsd" xmlns:mstns="http://tempuri.org/dsUserMaster.xsd" xmlns="http://tempuri.org/dsUserMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMSConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsUserMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsUserMaster" msprop:Generator_UserDSName="dsUserMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserMaster" msprop:Generator_TableClassName="UserMasterDataTable" msprop:Generator_RowEvArgName="UserMasterRowChangeEvent" msprop:Generator_TablePropName="UserMaster" msprop:Generator_TableVarName="tableUserMaster" msprop:Generator_RowEvHandlerName="UserMasterRowChangeEventHandler" msprop:Generator_RowDeletingName="UserMasterRowDeleting" msprop:Generator_RowChangingName="UserMasterRowChanging" msprop:Generator_RowDeletedName="UserMasterRowDeleted" msprop:Generator_UserTableName="UserMaster" msprop:Generator_RowChangedName="UserMasterRowChanged" msprop:Generator_RowClassName="UserMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:int" />
+              <xs:element name="LoginName" msprop:Generator_ColumnVarNameInTable="columnLoginName" msprop:Generator_ColumnPropNameInRow="LoginName" msprop:Generator_ColumnPropNameInTable="LoginNameColumn" msprop:Generator_UserColumnName="LoginName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoginPassword" msprop:Generator_ColumnVarNameInTable="columnLoginPassword" msprop:Generator_ColumnPropNameInRow="LoginPassword" msprop:Generator_ColumnPropNameInTable="LoginPasswordColumn" msprop:Generator_UserColumnName="LoginPassword" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnName" msprop:Generator_ColumnVarNameInTable="columnEnName" msprop:Generator_ColumnPropNameInRow="EnName" msprop:Generator_ColumnPropNameInTable="EnNameColumn" msprop:Generator_UserColumnName="EnName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChName" msprop:Generator_ColumnVarNameInTable="columnChName" msprop:Generator_ColumnPropNameInRow="ChName" msprop:Generator_ColumnPropNameInTable="ChNameColumn" msprop:Generator_UserColumnName="ChName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="phone" msprop:Generator_ColumnVarNameInTable="columnphone" msprop:Generator_ColumnPropNameInRow="phone" msprop:Generator_ColumnPropNameInTable="phoneColumn" msprop:Generator_UserColumnName="phone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserRight" msprop:Generator_ColumnVarNameInTable="columnUserRight" msprop:Generator_ColumnPropNameInRow="UserRight" msprop:Generator_ColumnPropNameInTable="UserRightColumn" msprop:Generator_UserColumnName="UserRight" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="on_show" msprop:Generator_ColumnVarNameInTable="columnon_show" msprop:Generator_ColumnPropNameInRow="on_show" msprop:Generator_ColumnPropNameInTable="on_showColumn" msprop:Generator_UserColumnName="on_show" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sys_date" msprop:Generator_ColumnVarNameInTable="columnsys_date" msprop:Generator_ColumnPropNameInRow="sys_date" msprop:Generator_ColumnPropNameInTable="sys_dateColumn" msprop:Generator_UserColumnName="sys_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ModUser" msprop:Generator_ColumnVarNameInTable="columnModUser" msprop:Generator_ColumnPropNameInRow="ModUser" msprop:Generator_ColumnPropNameInTable="ModUserColumn" msprop:Generator_UserColumnName="ModUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UserMaster" />
+      <xs:field xpath="mstns:UserId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

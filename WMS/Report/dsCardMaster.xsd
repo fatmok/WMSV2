@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCardMaster" targetNamespace="http://tempuri.org/dsCardMaster.xsd" xmlns:mstns="http://tempuri.org/dsCardMaster.xsd" xmlns="http://tempuri.org/dsCardMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMSConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CardMasterTableAdapter" GeneratorDataComponentClassName="CardMasterTableAdapter" Name="CardMaster" UserDataComponentName="CardMasterTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="WMSConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  CardMaster.on_show, CardMaster.ModUser, CardMaster.sys_date, CardMaster.RFID, CardMaster.DecCode, BinMaster.CustNo, BinMaster.ModelNO, 
+               BinMaster.StationNo
+FROM     CardMaster RIGHT OUTER JOIN
+               BinMaster ON CardMaster.BinId = BinMaster.BinId
+WHERE   (CardMaster.on_show = 'Y')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RFID" DataSetColumn="RFID" />
+              <Mapping SourceColumn="DecCode" DataSetColumn="DecCode" />
+              <Mapping SourceColumn="on_show" DataSetColumn="on_show" />
+              <Mapping SourceColumn="ModUser" DataSetColumn="ModUser" />
+              <Mapping SourceColumn="sys_date" DataSetColumn="sys_date" />
+              <Mapping SourceColumn="CustNo" DataSetColumn="CustNo" />
+              <Mapping SourceColumn="ModelNO" DataSetColumn="ModelNO" />
+              <Mapping SourceColumn="StationNo" DataSetColumn="StationNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCardMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCardMaster" msprop:Generator_UserDSName="dsCardMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CardMaster" msprop:Generator_TableClassName="CardMasterDataTable" msprop:Generator_TableVarName="tableCardMaster" msprop:Generator_TablePropName="CardMaster" msprop:Generator_RowDeletingName="CardMasterRowDeleting" msprop:Generator_RowChangingName="CardMasterRowChanging" msprop:Generator_RowEvHandlerName="CardMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="CardMasterRowDeleted" msprop:Generator_UserTableName="CardMaster" msprop:Generator_RowChangedName="CardMasterRowChanged" msprop:Generator_RowEvArgName="CardMasterRowChangeEvent" msprop:Generator_RowClassName="CardMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RFID" msprop:Generator_ColumnVarNameInTable="columnRFID" msprop:Generator_ColumnPropNameInRow="RFID" msprop:Generator_ColumnPropNameInTable="RFIDColumn" msprop:Generator_UserColumnName="RFID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DecCode" msprop:Generator_ColumnVarNameInTable="columnDecCode" msprop:Generator_ColumnPropNameInRow="DecCode" msprop:Generator_ColumnPropNameInTable="DecCodeColumn" msprop:Generator_UserColumnName="DecCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="on_show" msprop:Generator_ColumnVarNameInTable="columnon_show" msprop:Generator_ColumnPropNameInRow="on_show" msprop:Generator_ColumnPropNameInTable="on_showColumn" msprop:Generator_UserColumnName="on_show" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModUser" msprop:Generator_ColumnVarNameInTable="columnModUser" msprop:Generator_ColumnPropNameInRow="ModUser" msprop:Generator_ColumnPropNameInTable="ModUserColumn" msprop:Generator_UserColumnName="ModUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sys_date" msprop:Generator_ColumnVarNameInTable="columnsys_date" msprop:Generator_ColumnPropNameInRow="sys_date" msprop:Generator_ColumnPropNameInTable="sys_dateColumn" msprop:Generator_UserColumnName="sys_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CustNo" msprop:Generator_ColumnVarNameInTable="columnCustNo" msprop:Generator_ColumnPropNameInRow="CustNo" msprop:Generator_ColumnPropNameInTable="CustNoColumn" msprop:Generator_UserColumnName="CustNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelNO" msprop:Generator_ColumnVarNameInTable="columnModelNO" msprop:Generator_ColumnPropNameInRow="ModelNO" msprop:Generator_ColumnPropNameInTable="ModelNOColumn" msprop:Generator_UserColumnName="ModelNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StationNo" msprop:Generator_ColumnVarNameInTable="columnStationNo" msprop:Generator_ColumnPropNameInRow="StationNo" msprop:Generator_ColumnPropNameInTable="StationNoColumn" msprop:Generator_UserColumnName="StationNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

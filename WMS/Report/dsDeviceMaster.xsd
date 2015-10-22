@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDeviceMaster" targetNamespace="http://tempuri.org/dsDeviceMaster.xsd" xmlns:mstns="http://tempuri.org/dsDeviceMaster.xsd" xmlns="http://tempuri.org/dsDeviceMaster.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="WMS2015ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WMS2015ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WMS.My.MySettings.GlobalReference.Default.WMS2015ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDeviceMaster" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDeviceMaster" msprop:Generator_UserDSName="dsDeviceMaster">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DeviceMaster" msprop:Generator_TableClassName="DeviceMasterDataTable" msprop:Generator_TableVarName="tableDeviceMaster" msprop:Generator_TablePropName="DeviceMaster" msprop:Generator_RowDeletingName="DeviceMasterRowDeleting" msprop:Generator_RowChangingName="DeviceMasterRowChanging" msprop:Generator_RowEvHandlerName="DeviceMasterRowChangeEventHandler" msprop:Generator_RowDeletedName="DeviceMasterRowDeleted" msprop:Generator_UserTableName="DeviceMaster" msprop:Generator_RowChangedName="DeviceMasterRowChanged" msprop:Generator_RowEvArgName="DeviceMasterRowChangeEvent" msprop:Generator_RowClassName="DeviceMasterRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DeviceId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDeviceId" msprop:Generator_ColumnPropNameInRow="DeviceId" msprop:Generator_ColumnPropNameInTable="DeviceIdColumn" msprop:Generator_UserColumnName="DeviceId" type="xs:int" />
+              <xs:element name="DeviceSN" msprop:Generator_ColumnVarNameInTable="columnDeviceSN" msprop:Generator_ColumnPropNameInRow="DeviceSN" msprop:Generator_ColumnPropNameInTable="DeviceSNColumn" msprop:Generator_UserColumnName="DeviceSN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShopId" msprop:Generator_ColumnVarNameInTable="columnShopId" msprop:Generator_ColumnPropNameInRow="ShopId" msprop:Generator_ColumnPropNameInTable="ShopIdColumn" msprop:Generator_UserColumnName="ShopId" type="xs:int" minOccurs="0" />
+              <xs:element name="DeviceRemark" msprop:Generator_ColumnVarNameInTable="columnDeviceRemark" msprop:Generator_ColumnPropNameInRow="DeviceRemark" msprop:Generator_ColumnPropNameInTable="DeviceRemarkColumn" msprop:Generator_UserColumnName="DeviceRemark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="on_show" msprop:Generator_ColumnVarNameInTable="columnon_show" msprop:Generator_ColumnPropNameInRow="on_show" msprop:Generator_ColumnPropNameInTable="on_showColumn" msprop:Generator_UserColumnName="on_show" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="seq_no" msprop:Generator_ColumnVarNameInTable="columnseq_no" msprop:Generator_ColumnPropNameInRow="seq_no" msprop:Generator_ColumnPropNameInTable="seq_noColumn" msprop:Generator_UserColumnName="seq_no" type="xs:int" minOccurs="0" />
+              <xs:element name="ModUser" msprop:Generator_ColumnVarNameInTable="columnModUser" msprop:Generator_ColumnPropNameInRow="ModUser" msprop:Generator_ColumnPropNameInTable="ModUserColumn" msprop:Generator_UserColumnName="ModUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sys_date" msprop:Generator_ColumnVarNameInTable="columnsys_date" msprop:Generator_ColumnPropNameInRow="sys_date" msprop:Generator_ColumnPropNameInTable="sys_dateColumn" msprop:Generator_UserColumnName="sys_date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DeviceMaster" />
+      <xs:field xpath="mstns:DeviceId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
